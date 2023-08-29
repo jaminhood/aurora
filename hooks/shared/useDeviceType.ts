@@ -1,25 +1,25 @@
-"use client"
+'use client';
 
-import { useEffect, useState } from "react"
+import { useEffect, useState } from 'react';
 
 const useDeviceType = () => {
- const [isMobile, setIsMobile] = useState(false)
+	const [isMobile, setIsMobile] = useState(false);
 
- useEffect(() => {
-  const checkDeviceType = () => {
-   const isMobileDevice = /Mobi|Android/i.test(navigator.userAgent)
-   setIsMobile(isMobileDevice)
-  }
+	useEffect(() => {
+		const checkDeviceType: () => void = () => {
+			const isMobileDevice = /Mobi|Android/i.test(navigator.userAgent);
+			setIsMobile(isMobileDevice);
+		};
 
-  checkDeviceType()
-  window.addEventListener("resize", checkDeviceType)
+		checkDeviceType();
+		window.addEventListener('resize', checkDeviceType);
 
-  return () => {
-   window.removeEventListener("resize", checkDeviceType)
-  }
- }, [])
+		return () => {
+			window.removeEventListener('resize', checkDeviceType);
+		};
+	}, []);
 
- return { isMobile }
-}
+	return { isMobile };
+};
 
-export default useDeviceType
+export default useDeviceType;
