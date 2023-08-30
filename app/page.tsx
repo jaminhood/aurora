@@ -3,7 +3,7 @@ import Button from '@/components/shared/Button';
 
 export default function Home() {
 	return (
-		<section className='min-h-screen p-24 border border-red-500 max-w-7xl'>
+		<section className='min-h-screen p-24 max-w-7xl'>
 			<section className='inline-flex items-center gap-4 '>
 				<div>
 					<h1 className='text-5xl font-bold'>The Aurora Project.</h1>
@@ -16,7 +16,7 @@ export default function Home() {
 						Discover Menu
 					</Button>
 				</div>
-				<div className='border-2 p-60'></div>
+				<div className='border p-60'></div>
 			</section>
 			<section></section>
 		</section>
