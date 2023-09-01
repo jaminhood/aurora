@@ -1,4 +1,6 @@
 export type HeaderContentTypes = {
- desktop: React.ReactNode
- mobile: React.ReactNode
-}
+	navbarOpen: boolean;
+	toggleNavbar: () => void;
+};
+
+export type SetStateFunction<T> = React.Dispatch<React.SetStateAction<T>>;
