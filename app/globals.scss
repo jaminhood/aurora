@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.slick-dots {
+ button {
+  &::before {
+   content: "" !important;
+   width: 0.7rem !important;
+   height: 0.7rem !important;
+   border-radius: 50%;
+  }
+ }
+}
+
+.product-slider {
+ .slick-dots {
+  button {
+   &::before {
+    content: "" !important;
+    background: #000;
+   }
+  }
+ }
+
+ &__main {
+  .slick-dots {
+   position: absolute;
+   bottom: 1rem !important;
+
+   button {
+    &::before {
+     content: "" !important;
+     background: #fff;
+    }
+   }
+  }
+ }
+}
+
+.control__btn {
+ & {
+  position: absolute;
+  right: 1rem;
+  top: -3rem;
+  width: 2rem;
+  height: 2rem;
+  @apply border-2 border-gray-900 flex items-center justify-center rounded-full;
+ }
+
+ &--left {
+  right: 4rem;
+ }
+}
